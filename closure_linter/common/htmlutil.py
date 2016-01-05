@@ -20,12 +20,11 @@ __author__ = ('robbyw@google.com (Robert Walker)')
 
 import io
 import formatter
-import htmllib
 import html.parser
 import re
 
 
-class ScriptExtractor(htmllib.HTMLParser):
+class ScriptExtractor(html.parser.HTMLParser):
   """Subclass of HTMLParser that extracts script contents from an HTML file.
 
   Also inserts appropriate blank lines so that line numbers in the extracted
@@ -34,7 +33,7 @@ class ScriptExtractor(htmllib.HTMLParser):
 
   def __init__(self):
     """Initialize a ScriptExtractor."""
-    htmllib.HTMLParser.__init__(self, formatter.NullFormatter())
+    html.parser.HTMLParser.__init__(self, formatter.NullFormatter())
     self._in_script = False
     self._text = ''
 
