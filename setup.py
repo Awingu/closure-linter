@@ -26,7 +26,6 @@ setup(name='closure_linter',
       author='The Closure Linter Authors',
       author_email='opensource@google.com',
       url='https://github.com/google/closure-linter',
-      install_requires=['git+https://github.com/awingu/python-gflags.git@python-gflags-2.0-awingu3'],
       package_dir={'closure_linter': 'closure_linter'},
       packages=['closure_linter', 'closure_linter.common'],
       entry_points = {
